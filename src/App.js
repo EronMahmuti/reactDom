@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import react from 'react';
 import Todo from './components/Todo';
-import { Route } from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import AllMeetupsPage from './pages/AllMeetups';
 import FavoritesPage from './pages/Favorites';
-import newMeetup from './pages/NewMeetup';
+import NewMeetups from './pages/NewMeetup';
+import MainNavigation from './components/layout/MainNavigation';
 
 function App() {
   return (
-
     <div>
-      <Route path='/'></Route>
-      <Route path='/all-meetups'>
-        <AllMeetupsPage />
-      </Route>
-      <Route path='/new-meetup'>
-        <newMeetup />
-      </Route>
-      <Route path='/favorites'>
-        <FavoritesPage />
-      </Route>
+      <MainNavigation />
+      <Routes>
+          <Route path='/' element={<AllMeetupsPage />} />
+          <Route path='/new-meetup' element={<NewMeetups />} />
+          <Route path='/favorites' element={<FavoritesPage />} />
+      </Routes>
     </div>
   );
 }
