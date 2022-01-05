@@ -11,8 +11,14 @@ function App() {
 
     <div>
       <Route path='/'></Route>
+      <Route path='/all-meetups'>
+        <AllMeetupsPage />
+      </Route>
       <Route path='/new-meetup'>
-        <newMeetupsPage />
+        <newMeetup />
+      </Route>
+      <Route path='/favorites'>
+        <FavoritesPage />
       </Route>
     </div>
   );
