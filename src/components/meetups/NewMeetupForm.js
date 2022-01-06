@@ -21,7 +21,11 @@ function NewMeetupForm(rops){
                     <label htmlFor='description' >description</label>
                     <textarea  required id="description" rows="5" />
                 </div>
-                
+                <div className={classes.actions} >
+                    <button type='button'>
+                            Add Meetup
+                    </button>
+                </div>
             </form>
 
         </Card>
