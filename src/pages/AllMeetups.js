@@ -1,3 +1,6 @@
+import MeetupList from "../components/meetups/MeetupList";
+
+
 const Dummy_data = [
     {
         id: 'm1',
@@ -26,6 +29,7 @@ function AllMeetupsPage(){
             { Dummy_data.map((meetup) => {
                 return <li key={meetup.id} >{meetup.title}</li>
             })}
+            <MeetupList meetups={Dummy_data}  />
         </section>
     );
 }
