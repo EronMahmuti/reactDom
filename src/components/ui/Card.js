@@ -1,8 +1,8 @@
 import classes from './Card.module.css';
 
-function Card(){
+function Card(props){
     return (
-        <div className={classes.card} ></div>
+        <div className={classes.card} > {props.children} </div>
     );
 }
 
