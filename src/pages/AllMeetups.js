@@ -5,7 +5,7 @@ import MeetupList from "../components/meetups/MeetupList";
 
 function AllMeetupsPage(){
   const [isLoading, setIsLoading ] = useState(true);
-  const [ loadedMeetups, setLoadedMeetups] =   useState();
+  const [ loadedMeetups, setLoadedMeetups] =  useState();
 
   fetch('https://react-getting-started-533aa-default-rtdb.firebaseio.com/meetups.json').then((response) => {
     return response.json();
