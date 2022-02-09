@@ -3,13 +3,13 @@ import Backdrop from './Backdrop'
 import Modal from './Modal'
 
 function Todo(props){
-     const [ modalOpen, setModalOpen ] = useState(false);
+    const [ modalOpen, setModalOpen ] = useState(false);
     function deleteHandler(){
         setModalOpen(true);
     }
 
     function closeModal(){
-        setModalOpen(false);
+        setModalOpen(false); 
     }
     return(
         <div className='card'>

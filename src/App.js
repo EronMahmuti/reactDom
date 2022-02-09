@@ -12,6 +12,7 @@ function App() {
   return (
     <div>
       <MainNavigation />
+      <Todo text="Learn React" />
       <Routes>
           <Route path='/' element={<AllMeetupsPage />} />
           <Route path='/new-meetup' element={<NewMeetups />} />
