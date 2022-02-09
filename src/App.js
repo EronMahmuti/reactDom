@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <MainNavigation />
-      <Todo text="Learn React" />
+      <Todo text="Things to do today" />
       <Routes>
           <Route path='/' element={<AllMeetupsPage />} />
           <Route path='/new-meetup' element={<NewMeetups />} />
