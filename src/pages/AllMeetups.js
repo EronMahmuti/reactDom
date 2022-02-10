@@ -22,11 +22,8 @@ function AllMeetupsPage(){
       }
       setIsLoading(false);
       setLoadedMeetups(meetups);
-
-
     });
   }, []);
-
   
 
   if(isLoading){
@@ -41,6 +38,7 @@ function AllMeetupsPage(){
         <section>
             <h1>All meetups</h1>
             <MeetupList meetups={loadedMeetups}  />
+            
         </section>
     );
 }

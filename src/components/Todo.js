@@ -1,7 +1,7 @@
 import { useState,  } from 'react';
 import Backdrop from './Backdrop'
 import Modal from './Modal'
-
+import './todo.css'
 let nextId = 1;
 
 const initialTodos = [];
@@ -32,18 +32,19 @@ function Todo(props){
                 <input 
                 value={name}
                 onChange={e => setName(e.target.value)} />
-            <button className='btn' onClick={ handleClick } > Add </button>
-                <ul>
+                <button className='btn' onClick={ handleClick } > Add </button>
+                <ul className='Lists' >
                     {todos.map(todo => (<li key={todo.id} >
                         <div className='card'>
                             <h4> { props.text } </h4>
                             <h5> {todo.name} </h5>
                             <div className='actions'>
-                                <button className='btn' onClick={ () => {
+                                <button className='btn' onClick={ () => {    
                                     setTodos(
                                         todos.filter(t => t.id !== todo.id)
                                         )
-                                } } > Delete </button>
+                                        setModalOpen(true);     
+                                } } > Delete </button> leonora
                                 
                             </div>
                             {
@@ -51,8 +52,7 @@ function Todo(props){
                             }
                             {
                                 modalOpen && <Backdrop onClick={closeModal} />
-                            }
-                            
+                            }                            
                         </div>
                     </li>))}
                 </ul>
