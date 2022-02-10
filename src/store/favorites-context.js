@@ -1,4 +1,4 @@
-import {createContext} from 'react';
+import {createContext, useState} from 'react';
 
 const FavoritesContext = createContext({
     favorites: [],
@@ -8,8 +8,8 @@ const FavoritesContext = createContext({
     itemIsFavorite: (meetupId) => {}
 });
 
-function FavoritesContextProvider(props){
-    cont [userFavorites, setUserFavorites] = useState([]);
+export default function FavoritesContextProvider(props){
+    const [userFavorites, setUserFavorites] = useState([]);
 
     function addFavoriteHandler(favoriteMeetup) {
         setUserFavorites((prevUserFavorites) => {
