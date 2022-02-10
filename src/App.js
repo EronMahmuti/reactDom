@@ -7,17 +7,18 @@ import AllMeetupsPage from './pages/AllMeetups';
 import FavoritesPage from './pages/Favorites';
 import NewMeetups from './pages/NewMeetup';
 import MainNavigation from './components/layout/MainNavigation';
-
+import Layout from './components/layout/Layout';
 function App() {
   return (
     <div>
-      <MainNavigation />
+      <Layout>
+        <Routes>
+            <Route path='/' element={<AllMeetupsPage />} />
+            <Route path='/new-meetup' element={<NewMeetups />} />
+            <Route path='/favorites' element={<FavoritesPage />} />
+        </Routes>
+      </Layout>
       {/* <Todo text="Things to do today" /> */}
-      <Routes>
-          <Route path='/' element={<AllMeetupsPage />} />
-          <Route path='/new-meetup' element={<NewMeetups />} />
-          <Route path='/favorites' element={<FavoritesPage />} />
-      </Routes>
     </div>
   );
 }
