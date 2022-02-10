@@ -9,7 +9,7 @@ function AllMeetupsPage(){
 
   useEffect(() => {
     setIsLoading(true);
-    fetch('https://react-getting-started-533aa-default-rtdb.firebaseio.com/meetups.json').then((response) => {
+    fetch('https://reactacademind-455b4-default-rtdb.firebaseio.com/meetups.json').then((response) => {
       return response.json();
     }).then((data) => {
       const meetups = [];
